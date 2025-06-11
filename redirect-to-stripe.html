@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>購入ページに移動中...</title>
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const lineId = params.get("line_id");
+
+      if (!lineId) {
+        alert("LINE IDが見つかりませんでした。LINEから再度アクセスしてください。");
+        return;
+      }
+
+      // Stripe Payment Link に LINE ID を付与して遷移
+      const stripeUrl = `https://buy.stripe.com/dRmbJ29HzamPdmKgsj0Fi05?line_id=${lineId}`;
+      window.location.href = stripeUrl;
+    };
+  </script>
+</head>
+<body>
+  <p>決済ページに移動中です... 少々お待ちください。</p>
+</body>
+</html>
