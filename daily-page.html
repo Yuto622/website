@@ -1,0 +1,45 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        header, footer {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Today's Date: <script>document.write(new Date().toDateString());</script></h1>
+    </header>
+    <main>
+        <h2>Daily Quote: "Success is not final, failure is not fatal: It is the courage to continue that counts."</h2>
+    </main>
+    <footer>
+        <p>Current Time: <script>document.write(new Date().toLocaleTimeString());</script></p>
+    </footer>
+</body>
+</html>
+```
